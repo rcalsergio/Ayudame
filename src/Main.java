@@ -30,9 +30,9 @@ public class Main {
 
     // 5. Convierte segundos a formato horas:minutos:segundos (útil para misiones espaciales)
     public static String convertirTiempo(int segundos) {
-
-        //String.format("%02d:%02d:%02d", , , );
-        return "";
-
+        int h = segundos / 3600;
+        int m = (segundos % 3600) / 60;
+        int s = segundos % 60;
+        return String.format("%02d:%02d:%02d", h, m, s);
     }
 }
