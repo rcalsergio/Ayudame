@@ -10,68 +10,63 @@ public class Main {
     // 1. Calcula la velocidad orbital circular (en km/s)
     public static double velocidadOrbital(double radioKm, double masaPlanetaKg) {
         final double G = 6.67430e-20; // Constante G en km^3/(kg*s^2)
-        double velocidadOrbitalCircular = G*(radioKm)/(masaPlanetaKg*masaPlanetaKg);
-        return 0;
+        return Math.sqrt(G * masaPlanetaKg / radioKm);
     }
 
     // 2. Calcula el empuje de un motor (F = m_dot * v_e)
     public static double calcularEmpuje(double flujoMasicoKgPorS, double velocidadEscapeMPorS) {
         double empujeMotor = flujoMasicoKgPorS * velocidadEscapeMPorS;
-        return 0;
+        return empujeMotor;
     }
 
     // 3. Convierte nombre de planeta en su número de órbita desde el Sol
     public static int numeroOrbita(String planeta) {
-        Scanner sc = new Scanner(System.in);
-        int planetaUsuario= sc.nextInt();
 
-        System.out.println("Mercúrio → 1"
-                            + "Vênus → 2"
-                            + "Terra → 3"
-                            + "Marte → 4"
-                            + "Júpiter → 5"
-                            + "Saturno → 6"
-                            + "Urano → 7"
-                            + "Netuno → 8");
+        switch (planeta.toLowerCase()) {
 
-        switch (planetaUsuario) {
-            case 1:
-                System.out.println("Mercúrio 88 dias (~0,24 anos)");;
-            case 2:
-                System.out.println("Vênus → 2225 dias (~0,62 anos)");
-            case 3:
-                System.out.println("Terra → 365 dias (1 ano)");
-            case 4:
-                System.out.println("Marte → 687 dias (~1,88 anos)");
-            case 5:
-                System.out.println("Júpiter → 11,86 anos");
-            case 6:
-                System.out.println("Saturno → 29,45 anos");
-            case 7:
-                System.out.println("Urano → 84 anos");
-            case 8:
-               System.out.println("Netuno → 164,8 anos");
+            case "mercurio":
+                return 1;
+            case "venus":
+                return 2;
+            case "tierra":
+                return 3;
+            case "marte":
+                return 4;
+            case "jupiter":
+                return 5;
+            case "saturno":
+                return 6;
+            case "urano":
+                return 7;
+            case "netuno":
+                return 8;
+                default:
+                    return -1;
+
         }
-
-       return 0;
 
     }
 
+
     // 4. Promedio de altitudes de satélites
     public static double promedioAltitudes(double[] altitudesKm) {
-        int satelites = 8;
-        double promedioAltitudes = 0;
-        double promedio = altitudesKm.length/satelites;
+        double suma = 0;
 
-        return 0;
+        for (int i = 0; i < altitudesKm.length; i++) {
+            double altitude = altitudesKm[i];
+            suma += altitude;
+        }
+
+        return suma / altitudesKm.length;
     }
 
     // 5. Convierte segundos a formato horas:minutos:segundos (útil para misiones espaciales)
     public static String convertirTiempo(int segundos) {
         int minutos = segundos % 3600 / 60;
         int hora = segundos / 3600;
+        int segundo = segundos % 60;
 
-        return String.format("%02d:%02d:%02d", hora, minutos, segundos);
+        return String.format("%02d:%02d:%02d", hora, minutos, segundo);
     }
 
 }
