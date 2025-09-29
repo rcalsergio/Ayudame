@@ -9,7 +9,8 @@ public class Main {
     // 1. Calcula la velocidad orbital circular (en km/s)
     public static double velocidadOrbital(double radioKm, double masaPlanetaKg) {
         final double G = 6.67430e-20; // Constante G en km^3/(kg*s^2)
-        return 0;
+        double vOC = Math.sqrt((G*masaPlanetaKg)/radioKm); //v = √(GM/r):
+        return vOC;
     }
 
     // 2. Calcula el empuje de un motor (F = m_dot * v_e)
