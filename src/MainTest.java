@@ -15,6 +15,7 @@ class MainTest {
     void testCalcularEmpuje() {
         double empuje = Main.calcularEmpuje(250, 3000);
         assertEquals(750000, empuje, "El empuje debería ser 250 * 3000 = 750000 N");
+
     }
 
     @Test
