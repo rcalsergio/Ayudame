@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EjerArraysRepaso.java/EjerArraysRepaso.java.iml" filepath="$PROJECT_DIR$/EjerArraysRepaso.java/EjerArraysRepaso.java.iml" />
       <module fileurl="file://$PROJECT_DIR$/EjerciciosArrays.iml" filepath="$PROJECT_DIR$/EjerciciosArrays.iml" />
     </modules>
   </component>

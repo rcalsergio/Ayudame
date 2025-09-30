@@ -6,6 +6,10 @@ public class Main {
   public static void main(String[] args) {
     Scanner teclado = new Scanner(System.in);
 
+    ejercicioPrueba ejemplo = new ejercicioPrueba();
+
+    ejemplo.hayUnNegativo(new int[]{1, 2, 3, -1});
+
     /*
     //Ejercicios sobre Arrays en Java
     /*
@@ -57,7 +61,7 @@ public class Main {
     array y muestra qué corredores superaron los 20 km/h. Crea una funció n que reciba la
     velocidad y devuelva un mensaje indicando si es 'Rá pido' o 'Normal'.*/
 
-      public static double elementosRandom (double a, double b){
+      /*public static double elementosRandom (double a, double b){
         double numero = 0;
         if (a >= b) {
           System.out.println("\"a\" debe ser menor que \"b\"");
@@ -65,7 +69,7 @@ public class Main {
           numero = a + (b - a) * Math.random();
         return numero;
       }
-
+      */
 
 
   }
